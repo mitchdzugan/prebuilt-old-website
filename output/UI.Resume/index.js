@@ -118,7 +118,7 @@ var resume = Impulse_DOM_Tags.div_(Control_Apply.applySecond(Control_Monad_State
         return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text(" - (630) 946-9282 - ")))(function () {
             return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("https://github.com/mitchdzugan"))(Impulse_DOM_API.text("github")))(function () {
                 return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text(" - ")))(function () {
-                    return Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("https://mitchdzugan.com"))(Impulse_DOM_API.text("website"));
+                    return Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("http://mdzugan.com"))(Impulse_DOM_API.text("website"));
                 });
             });
         });
@@ -252,9 +252,9 @@ var resume = Impulse_DOM_Tags.div_(Control_Apply.applySecond(Control_Monad_State
                     })))(function () {
                         return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Supports server-side rendering and interactions with all web APIs such as localStorage and history")))(function () {
                             return Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_API.text("Powers my website "))(function () {
-                                return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("https://mitchdzugan.com"))(Impulse_DOM_API.text("https://mitchdzugan.com")))(function () {
+                                return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("http://mdzugan.com"))(Impulse_DOM_API.text("http://mdzugan.com")))(function () {
                                     return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_API.text(". Early introductory guide for javascript developers is "))(function () {
-                                        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("https://mitchdzugan.com/impulse"))(Impulse_DOM_API.text("here")))(function () {
+                                        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("http://mdzugan.com/impulse"))(Impulse_DOM_API.text("here")))(function () {
                                             return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_API.text(" and additional documentation is hosted on "))(function () {
                                                 return Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("https://pursuit.purescript.org/packages/purescript-impulse/3.0.0/docs/Impulse.DOM"))(Impulse_DOM_API.text("Pursuit"));
                                             });
