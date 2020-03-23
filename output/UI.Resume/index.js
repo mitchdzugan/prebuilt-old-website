@@ -61,53 +61,57 @@ var vidIndicator = function (vods) {
                                     return Impulse_DOM_API.dnil;
                                 };
                                 if (m_vod instanceof Data_Maybe.Just) {
-                                    return Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("modal is-active"))(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("modal-background"))(Impulse_DOM_API.dnil))(function () {
-                                        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("modal-content"))(Impulse_DOM_API.keyed("modalVod " + Data_Show.show(Data_Show.showInt)(vodIndex))(Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("card"))(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("card-content"))(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.video_(Control_Apply.applySecond(Control_Monad_State_Trans.applyStateT(Data_Identity.monadIdentity))(Impulse_DOM_Attrs.className("video-content"))(Impulse_DOM_Attrs.controls(true)))(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.source_(Control_Apply.applySecond(Control_Monad_State_Trans.applyStateT(Data_Identity.monadIdentity))(Impulse_DOM_Attrs.src(m_vod.value0.vod))(Impulse_DOM_Attrs.attr_type("video/mp4")))(Impulse_DOM_API.dnil))(function () {
-                                            return Impulse_DOM_API.text("video tag unsupported by browser");
-                                        })))(function () {
-                                            return Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("content"))(Impulse_DOM_API.text(m_vod.value0.desc));
-                                        })))(function () {
-                                            return Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("card-footer"))(Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("card-footer-item"))(Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("buttons has-addons"))(Control_Bind.bind(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.button(Control_Apply.applySecond(Control_Monad_State_Trans.applyStateT(Data_Identity.monadIdentity))(Impulse_DOM_Attrs.className("button"))(Impulse_DOM_Attrs.disabled(isFirst)))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.className("icon is-large"))(Impulse_DOM_Tags.i_(Impulse_DOM_Attrs.className("fas fa-caret-left"))(Impulse_DOM_API.dnil))))(function (d_prev) {
-                                                return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_Util_Foldable.forMi_(Control_Monad_Reader_Trans.monadRecReaderT(Control_Monad_Rec_Class.monadRecIdentity))(Data_Foldable.foldableArray)(vods)(function (ind) {
-                                                    return function (v) {
-                                                        return Impulse_DOM_API.keyed("vodSel " + Data_Show.show(Data_Show.showInt)(ind))(Control_Bind.bind(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.button(Impulse_DOM_Attrs.className("button"))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.classNames(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_State_Trans.bindStateT(Data_Identity.monadIdentity))(Impulse_DOM_Attrs.cn("icon is-small"))(function () {
-                                                            var $6 = ind === vodIndex;
-                                                            if ($6) {
-                                                                return Impulse_DOM_Attrs.cn("has-text-dark");
-                                                            };
-                                                            return Impulse_DOM_Attrs.cn("has-text-grey-lighter");
-                                                        })))(Impulse_DOM_Tags.i_(Impulse_DOM_Attrs.className("fas fa-circle"))(Impulse_DOM_API.dnil))))(function (d_sel) {
-                                                            return Impulse_DOM_API.e_emit(new Data_Symbol.IsSymbol(function () {
+                                    return Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("modal is-active"))(Control_Bind.bind(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.div(Impulse_DOM_Attrs.className("modal-background"))(Impulse_DOM_API.dnil))(function (d_background) {
+                                        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_API.e_emit(new Data_Symbol.IsSymbol(function () {
+                                            return "modal";
+                                        }))()(p_modal)(Data_Functor.mapFlipped(Impulse_FRP_Event.functorEvent)(Impulse_DOM_ImpulseEl.onClick(d_background))(Data_Function["const"](false))))(function () {
+                                            return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("modal-content"))(Impulse_DOM_API.keyed("modalVod " + Data_Show.show(Data_Show.showInt)(vodIndex))(Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("card"))(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("card-content"))(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.video_(Control_Apply.applySecond(Control_Monad_State_Trans.applyStateT(Data_Identity.monadIdentity))(Impulse_DOM_Attrs.className("video-content"))(Impulse_DOM_Attrs.controls(true)))(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.source_(Control_Apply.applySecond(Control_Monad_State_Trans.applyStateT(Data_Identity.monadIdentity))(Impulse_DOM_Attrs.src(m_vod.value0.vod))(Impulse_DOM_Attrs.attr_type("video/mp4")))(Impulse_DOM_API.dnil))(function () {
+                                                return Impulse_DOM_API.text("video tag unsupported by browser");
+                                            })))(function () {
+                                                return Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("content"))(Impulse_DOM_API.text(m_vod.value0.desc));
+                                            })))(function () {
+                                                return Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("card-footer"))(Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("card-footer-item"))(Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("buttons has-addons"))(Control_Bind.bind(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.button(Control_Apply.applySecond(Control_Monad_State_Trans.applyStateT(Data_Identity.monadIdentity))(Impulse_DOM_Attrs.className("button"))(Impulse_DOM_Attrs.disabled(isFirst)))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.className("icon is-large"))(Impulse_DOM_Tags.i_(Impulse_DOM_Attrs.className("fas fa-caret-left"))(Impulse_DOM_API.dnil))))(function (d_prev) {
+                                                    return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_Util_Foldable.forMi_(Control_Monad_Reader_Trans.monadRecReaderT(Control_Monad_Rec_Class.monadRecIdentity))(Data_Foldable.foldableArray)(vods)(function (ind) {
+                                                        return function (v) {
+                                                            return Impulse_DOM_API.keyed("vodSel " + Data_Show.show(Data_Show.showInt)(ind))(Control_Bind.bind(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.button(Impulse_DOM_Attrs.className("button"))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.classNames(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_State_Trans.bindStateT(Data_Identity.monadIdentity))(Impulse_DOM_Attrs.cn("icon is-small"))(function () {
+                                                                var $6 = ind === vodIndex;
+                                                                if ($6) {
+                                                                    return Impulse_DOM_Attrs.cn("has-text-dark");
+                                                                };
+                                                                return Impulse_DOM_Attrs.cn("has-text-grey-lighter");
+                                                            })))(Impulse_DOM_Tags.i_(Impulse_DOM_Attrs.className("fas fa-circle"))(Impulse_DOM_API.dnil))))(function (d_sel) {
+                                                                return Impulse_DOM_API.e_emit(new Data_Symbol.IsSymbol(function () {
+                                                                    return "vodIndex";
+                                                                }))()(p_vodIndex)(Data_Functor.mapFlipped(Impulse_FRP_Event.functorEvent)(Impulse_DOM_ImpulseEl.onClick(d_sel))(Data_Function["const"](ind)));
+                                                            }));
+                                                        };
+                                                    }))(function () {
+                                                        return Control_Bind.bind(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.button(Control_Apply.applySecond(Control_Monad_State_Trans.applyStateT(Data_Identity.monadIdentity))(Impulse_DOM_Attrs.className("button"))(Impulse_DOM_Attrs.disabled(isLast)))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.className("icon is-large"))(Impulse_DOM_Tags.i_(Impulse_DOM_Attrs.className("fas fa-caret-right"))(Impulse_DOM_API.dnil))))(function (d_next) {
+                                                            return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_API.e_emit(new Data_Symbol.IsSymbol(function () {
                                                                 return "vodIndex";
-                                                            }))()(p_vodIndex)(Data_Functor.mapFlipped(Impulse_FRP_Event.functorEvent)(Impulse_DOM_ImpulseEl.onClick(d_sel))(Data_Function["const"](ind)));
-                                                        }));
-                                                    };
-                                                }))(function () {
-                                                    return Control_Bind.bind(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.button(Control_Apply.applySecond(Control_Monad_State_Trans.applyStateT(Data_Identity.monadIdentity))(Impulse_DOM_Attrs.className("button"))(Impulse_DOM_Attrs.disabled(isLast)))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.className("icon is-large"))(Impulse_DOM_Tags.i_(Impulse_DOM_Attrs.className("fas fa-caret-right"))(Impulse_DOM_API.dnil))))(function (d_next) {
-                                                        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_API.e_emit(new Data_Symbol.IsSymbol(function () {
-                                                            return "vodIndex";
-                                                        }))()(p_vodIndex)(Data_Functor.mapFlipped(Impulse_FRP_Event.functorEvent)(Impulse_DOM_ImpulseEl.onClick(d_prev))(Data_Function["const"](vodIndex - 1 | 0))))(function () {
-                                                            return Impulse_DOM_API.e_emit(new Data_Symbol.IsSymbol(function () {
-                                                                return "vodIndex";
-                                                            }))()(p_vodIndex)(Data_Functor.mapFlipped(Impulse_FRP_Event.functorEvent)(Impulse_DOM_ImpulseEl.onClick(d_next))(Data_Function["const"](vodIndex + 1 | 0)));
+                                                            }))()(p_vodIndex)(Data_Functor.mapFlipped(Impulse_FRP_Event.functorEvent)(Impulse_DOM_ImpulseEl.onClick(d_prev))(Data_Function["const"](vodIndex - 1 | 0))))(function () {
+                                                                return Impulse_DOM_API.e_emit(new Data_Symbol.IsSymbol(function () {
+                                                                    return "vodIndex";
+                                                                }))()(p_vodIndex)(Data_Functor.mapFlipped(Impulse_FRP_Event.functorEvent)(Impulse_DOM_ImpulseEl.onClick(d_next))(Data_Function["const"](vodIndex + 1 | 0)));
+                                                            });
                                                         });
                                                     });
+                                                }))));
+                                            })))))(function () {
+                                                return Control_Bind.bind(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.button(Impulse_DOM_Attrs.className("modal-close is-large"))(Impulse_DOM_API.dnil))(function (d_close) {
+                                                    return Impulse_DOM_API.e_emit(new Data_Symbol.IsSymbol(function () {
+                                                        return "modal";
+                                                    }))()(p_modal)(Data_Functor.mapFlipped(Impulse_FRP_Event.functorEvent)(Impulse_DOM_ImpulseEl.onClick(d_close))(Data_Function["const"](false)));
                                                 });
-                                            }))));
-                                        })))))(function () {
-                                            return Control_Bind.bind(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.button(Impulse_DOM_Attrs.className("modal-close is-large"))(Impulse_DOM_API.dnil))(function (d_close) {
-                                                return Impulse_DOM_API.e_emit(new Data_Symbol.IsSymbol(function () {
-                                                    return "modal";
-                                                }))()(p_modal)(Data_Functor.mapFlipped(Impulse_FRP_Event.functorEvent)(Impulse_DOM_ImpulseEl.onClick(d_close))(Data_Function["const"](false)));
                                             });
                                         });
                                     }));
                                 };
-                                throw new Error("Failed pattern match at UI.Resume (line 35, column 15 - line 69, column 69): " + [ m_vod.constructor.name ]);
+                                throw new Error("Failed pattern match at UI.Resume (line 35, column 15 - line 70, column 69): " + [ m_vod.constructor.name ]);
                             });
                         }));
                     };
-                    throw new Error("Failed pattern match at UI.Resume (line 26, column 7 - line 69, column 69): " + [ modal.constructor.name ]);
+                    throw new Error("Failed pattern match at UI.Resume (line 26, column 7 - line 70, column 69): " + [ modal.constructor.name ]);
                 });
             });
         });
@@ -166,32 +170,40 @@ var resume = Impulse_DOM_Tags.div_(Control_Apply.applySecond(Control_Monad_State
                             });
                         });
                     })))(function () {
-                        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(vidIndicator([ {
-                            vod: "/api_report_1.mp4",
-                            desc: "This video demonstrates how the user is able to search the external API for the game they wish to report."
-                        }, {
-                            vod: "/api_report_2.mp4",
-                            desc: "This video demonstrates how the user is able to link a game they found using the API to be reported as a game in our site and how they can edit the API reported scores if necessary"
-                        } ]))(function () {
-                            return Impulse_DOM_API.text("Led development and managed a team of 3 engineers that built a system for automatically reporting scores to a tournament for games with API support");
-                        })))(function () {
-                            return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Led development on several other projects where responsibilities included:")))(function () {
-                                return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Independently fleshing out high level product goals into prototypes that the team used to align on final product spec before moving forward with feature development as a team")))(function () {
-                                    return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Writing an engineering spec and test plan")))(function () {
-                                        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Planning work for other engineers by means of creating Jira tickets and maintaining a Jira board")))(function () {
-                                            return Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Scheduling and leading planning and retro meetings"));
+                        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Led development and managed a team of 3 engineers that built a system for automatically reporting scores to a tournament for games with API support. Feature-set included:")))(function () {
+                            return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(vidIndicator([ {
+                                vod: "/api_report_1.mp4",
+                                desc: "This video demonstrates how the user is able to search the external API for the game they wish to report."
+                            }, {
+                                vod: "/api_report_2.mp4",
+                                desc: "This video demonstrates how the user is able to link a game they found using the API to be reported as a game in our site and how they can edit the API reported scores if necessary"
+                            } ]))(function () {
+                                return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Ability to search for and inspect stats from games played")))(function () {
+                                    return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Automatic matching of players in game with users on site")))(function () {
+                                        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Ability to alter API reported scores when necessary and view differences between API results and manually changed results")))(function () {
+                                            return Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("UI implemented in high level abstractions over API such that games with vastly different APIs were supported using the same system"));
                                         });
                                     });
-                                })))(function () {
-                                    return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Built incremental server side rendering engine and refactored core render paths as part of effort to improve key \u201ctime to interactive\u201d performance metrics by 40% for average users")))(function () {
-                                        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Domain expert for multiple systems including bracketing algorithms and core front-end infrastructure")))(function () {
-                                            return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Helped improve company wide code quality through code review, mentorship and pair programming")))(function () {
-                                                return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Primary driver behind \u201cLunch \u2018n Learn\u201d initiative in which engineers shared internal domain knowledge as well as any other topics they thought were interesting/useful. Gave talks on topics including:")))(function () {
-                                                    return Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Redux")))(function () {
-                                                        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("React Context")))(function () {
-                                                            return Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("3 part series on Category Theory and how it can inform javascript development"));
-                                                        });
-                                                    }));
+                                });
+                            })))(function () {
+                                return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Led development on several other projects where responsibilities included:")))(function () {
+                                    return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Independently fleshing out high level product goals into prototypes that the team used to align on final product spec before moving forward with feature development as a team")))(function () {
+                                        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Writing an engineering spec and test plan")))(function () {
+                                            return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Planning work for other engineers by means of creating Jira tickets and maintaining a Jira board")))(function () {
+                                                return Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Scheduling and leading planning and retro meetings"));
+                                            });
+                                        });
+                                    })))(function () {
+                                        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Built incremental server side rendering engine and refactored core render paths as part of effort to improve key \u201ctime to interactive\u201d performance metrics by 40% for average users")))(function () {
+                                            return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Domain expert for multiple systems including bracketing algorithms and core front-end infrastructure")))(function () {
+                                                return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Helped improve company wide code quality through code review, mentorship and pair programming")))(function () {
+                                                    return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Primary driver behind \u201cLunch \u2018n Learn\u201d initiative in which engineers shared internal domain knowledge as well as any other topics they thought were interesting/useful. Gave talks on topics including:")))(function () {
+                                                        return Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Redux")))(function () {
+                                                            return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("React Context")))(function () {
+                                                                return Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("3 part series on Category Theory and how it can inform javascript development"));
+                                                            });
+                                                        }));
+                                                    });
                                                 });
                                             });
                                         });
