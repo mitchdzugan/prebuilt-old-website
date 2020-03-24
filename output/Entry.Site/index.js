@@ -14,7 +14,7 @@ var UI_ImpulseGuide = require("../UI.ImpulseGuide/index.js");
 var UI_Resume = require("../UI.Resume/index.js");
 var router = function (v) {
     if (v instanceof Route.Home) {
-        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.p_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Under Construction until I figure out what I want to put here...")))(function () {
+        return Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("container"))(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.p_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Under Construction until I figure out what I want to put here...")))(function () {
             return Impulse_DOM_Tags.p_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_API.text("For now check out existing projects on "))(function () {
                 return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href(Route.toUrl(Route.Resume.value)))(Impulse_DOM_API.text("My Resume")))(function () {
                     return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_API.text(" or learn about my web framework with the "))(function () {
@@ -22,7 +22,7 @@ var router = function (v) {
                     });
                 });
             }));
-        });
+        }));
     };
     if (v instanceof Route.Resume) {
         return UI_Resume.resume;
