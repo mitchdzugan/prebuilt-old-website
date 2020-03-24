@@ -114,7 +114,7 @@ var renderSection = function (v) {
         });
     }));
 };
-var impulseGuide = Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("content"))(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.h1_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Gentle Introduction to Impulse for React developers")))(function () {
+var impulseGuide = Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("container"))(Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("content"))(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.h1_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Gentle Introduction to Impulse for React developers")))(function () {
     return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.p_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Impulse uses a monadic interface to create components/UIs. For now we will skip the Category Theory behind what that actually means and approach the available API from a practical point of view.")))(function () {
         return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.p_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("I tend to think of there being 2 dimensions of computation when building complex UIs. Those 2 dimensions being:")))(function () {
             return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.ol_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Building up the markup that represents the current view of the application")))(function () {
@@ -524,7 +524,7 @@ var impulseGuide = Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_
             });
         });
     });
-})))(function () {
+}))))(function () {
     return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("mini-spacer"))(Impulse_DOM_API.dnil))(function () {
         return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.p_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_API.text("This guide is a very early work in progress, if you would like to learn more I'd recommend checking out the project on "))(function () {
             return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("https://github.com/mitchdzugan/purescript-impulse"))(Impulse_DOM_API.text("GitHub")))(function () {

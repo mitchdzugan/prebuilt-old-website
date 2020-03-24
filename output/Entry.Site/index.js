@@ -38,7 +38,7 @@ var router = function (v) {
 var entry = Control_Bind.bind(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Util.getEnv(new Data_Symbol.IsSymbol(function () {
     return "route";
 }))()(App.p_route))(function (route) {
-    return Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("container"))(Impulse_DOM_API.s_bindDOM_(route)(router));
+    return Impulse_DOM_API.s_bindDOM_(route)(router);
 });
 module.exports = {
     router: router,
