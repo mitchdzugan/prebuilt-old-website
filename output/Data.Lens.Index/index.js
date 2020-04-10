@@ -3,10 +3,12 @@
 var Control_Applicative = require("../Control.Applicative/index.js");
 var Data_Array = require("../Data.Array/index.js");
 var Data_Array_NonEmpty = require("../Data.Array.NonEmpty/index.js");
+var Data_Boolean = require("../Data.Boolean/index.js");
 var Data_Eq = require("../Data.Eq/index.js");
 var Data_Functor = require("../Data.Functor/index.js");
 var Data_Identity = require("../Data.Identity/index.js");
 var Data_Lens_Internal_Wander = require("../Data.Lens.Internal.Wander/index.js");
+var Data_List_Types = require("../Data.List.Types/index.js");
 var Data_Map_Internal = require("../Data.Map.Internal/index.js");
 var Data_Maybe = require("../Data.Maybe/index.js");
 var Data_Set = require("../Data.Set/index.js");
@@ -23,10 +25,10 @@ var indexSet = function (dictOrd) {
         return function (dictWander) {
             return Data_Lens_Internal_Wander.wander(dictWander)(function (dictApplicative) {
                 return function (coalg) {
-                    var $22 = Control_Applicative.pure(dictApplicative);
-                    var $23 = Data_Set.insert(dictOrd)(x);
-                    return function ($24) {
-                        return $22($23($24));
+                    var $40 = Control_Applicative.pure(dictApplicative);
+                    var $41 = Data_Set.insert(dictOrd)(x);
+                    return function ($42) {
+                        return $40($41($42));
                     };
                 };
             });
@@ -39,11 +41,11 @@ var indexNonEmptyArray = new Index(function (n) {
             return function (coalg) {
                 return function (xs) {
                     return Data_Maybe.maybe(Control_Applicative.pure(dictApplicative)(xs))((function () {
-                        var $25 = Data_Functor.map((dictApplicative.Apply0()).Functor0())(function (x) {
+                        var $43 = Data_Functor.map((dictApplicative.Apply0()).Functor0())(function (x) {
                             return Data_Maybe.fromMaybe(xs)(Data_Array_NonEmpty.updateAt(n)(x)(xs));
                         });
-                        return function ($26) {
-                            return $25(coalg($26));
+                        return function ($44) {
+                            return $43(coalg($44));
                         };
                     })())(Data_Array_NonEmpty.index(xs)(n));
                 };
@@ -65,11 +67,11 @@ var indexMap = function (dictOrd) {
                 return function (coalg) {
                     return function (m) {
                         return Data_Maybe.maybe(Control_Applicative.pure(dictApplicative)(m))((function () {
-                            var $27 = Data_Functor.map((dictApplicative.Apply0()).Functor0())(function (v) {
+                            var $45 = Data_Functor.map((dictApplicative.Apply0()).Functor0())(function (v) {
                                 return Data_Map_Internal.insert(dictOrd)(k)(v)(m);
                             });
-                            return function ($28) {
-                                return $27(coalg($28));
+                            return function ($46) {
+                                return $45(coalg($46));
                             };
                         })())(Data_Map_Internal.lookup(dictOrd)(k)(m));
                     };
@@ -78,6 +80,51 @@ var indexMap = function (dictOrd) {
         };
     });
 };
+var indexList = new Index(function (n) {
+    return function (dictWander) {
+        if (n < 0) {
+            return Data_Lens_Internal_Wander.wander(dictWander)(function (dictApplicative) {
+                return function (v) {
+                    return function (xs) {
+                        return Control_Applicative.pure(dictApplicative)(xs);
+                    };
+                };
+            });
+        };
+        if (Data_Boolean.otherwise) {
+            var go = function (dictApplicative) {
+                return function (v) {
+                    return function (v1) {
+                        return function (v2) {
+                            if (v instanceof Data_List_Types.Nil) {
+                                return Control_Applicative.pure(dictApplicative)(Data_List_Types.Nil.value);
+                            };
+                            if (v instanceof Data_List_Types.Cons && v1 === 0) {
+                                return Data_Functor.mapFlipped((dictApplicative.Apply0()).Functor0())(v2(v.value0))(function (v3) {
+                                    return new Data_List_Types.Cons(v3, v.value1);
+                                });
+                            };
+                            if (v instanceof Data_List_Types.Cons) {
+                                return Data_Functor.map((dictApplicative.Apply0()).Functor0())(function (v3) {
+                                    return new Data_List_Types.Cons(v.value0, v3);
+                                })(go(dictApplicative)(v.value1)(v1 - 1 | 0)(v2));
+                            };
+                            throw new Error("Failed pattern match at Data.Lens.Index (line 83, column 5 - line 83, column 79): " + [ v.constructor.name, v1.constructor.name, v2.constructor.name ]);
+                        };
+                    };
+                };
+            };
+            return Data_Lens_Internal_Wander.wander(dictWander)(function (dictApplicative) {
+                return function (coalg) {
+                    return function (xs) {
+                        return go(dictApplicative)(xs)(n)(coalg);
+                    };
+                };
+            });
+        };
+        throw new Error("Failed pattern match at Data.Lens.Index (line 80, column 1 - line 86, column 56): " + [ n.constructor.name ]);
+    };
+});
 var indexIdentity = new Index(function (v) {
     return function (dictWander) {
         return Data_Lens_Internal_Wander.wander(dictWander)(function (dictApplicative) {
@@ -91,11 +138,11 @@ var indexForeignObject = new Index(function (k) {
             return function (coalg) {
                 return function (m) {
                     return Data_Maybe.maybe(Control_Applicative.pure(dictApplicative)(m))((function () {
-                        var $29 = Data_Functor.map((dictApplicative.Apply0()).Functor0())(function (v) {
+                        var $47 = Data_Functor.map((dictApplicative.Apply0()).Functor0())(function (v) {
                             return Foreign_Object.insert(k)(v)(m);
                         });
-                        return function ($30) {
-                            return $29(coalg($30));
+                        return function ($48) {
+                            return $47(coalg($48));
                         };
                     })())(Foreign_Object.lookup(k)(m));
                 };
@@ -109,11 +156,11 @@ var indexArray = new Index(function (n) {
             return function (coalg) {
                 return function (xs) {
                     return Data_Maybe.maybe(Control_Applicative.pure(dictApplicative)(xs))((function () {
-                        var $31 = Data_Functor.map((dictApplicative.Apply0()).Functor0())(function (x) {
+                        var $49 = Data_Functor.map((dictApplicative.Apply0()).Functor0())(function (x) {
                             return Data_Maybe.fromMaybe(xs)(Data_Array.updateAt(n)(x)(xs));
                         });
-                        return function ($32) {
-                            return $31(coalg($32));
+                        return function ($50) {
+                            return $49(coalg($50));
                         };
                     })())(Data_Array.index(xs)(n));
                 };
@@ -129,8 +176,8 @@ var indexArr = function (dictEq) {
                     return function (f) {
                         return Data_Functor.mapFlipped((dictApplicative.Apply0()).Functor0())(coalg(f(i)))(function (a) {
                             return function (j) {
-                                var $21 = Data_Eq.eq(dictEq)(i)(j);
-                                if ($21) {
+                                var $39 = Data_Eq.eq(dictEq)(i)(j);
+                                if ($39) {
                                     return a;
                                 };
                                 return f(j);
@@ -150,6 +197,7 @@ module.exports = {
     indexIdentity: indexIdentity,
     indexArray: indexArray,
     indexNonEmptyArray: indexNonEmptyArray,
+    indexList: indexList,
     indexSet: indexSet,
     indexMap: indexMap,
     indexForeignObject: indexForeignObject

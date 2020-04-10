@@ -286,67 +286,86 @@ var resumeContent = Impulse_DOM_Tags.div_(Control_Apply.applySecond(Control_Mona
                         });
                     }));
                 })))(function () {
-                    return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.section_(Control_Apply.applySecond(Control_Monad_State_Trans.applyStateT(Data_Identity.monadIdentity))(Impulse_DOM_Attrs.className("section"))(Impulse_DOM_Attrs.id("ssbm")))(Impulse_DOM_Tags.p_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.className("is-size-5 has-text-weight-bold"))(Impulse_DOM_API.text("Super Smash Bros. Melee Projects")))(function () {
-                        return Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("https://github.com/mitchdzugan/osx-wiiu-gcc-adapter"))(Impulse_DOM_API.text("https://github.com/mitchdzugan/osx-wiiu-gcc-adapter"))))(function () {
-                            return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("First OSX driver written for the official Nintendo GameCube usb adapter, on which all modern community accepted drivers are built from"))))(function () {
-                                return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("https://github.com/mitchdzugan/cvmelee"))(Impulse_DOM_API.text("https://github.com/mitchdzugan/cvmelee"))))(function () {
-                                    return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Uses openCV to pull statistics from videos of gameplay")))(function () {
-                                        return Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("This program is able to locate where the gameplay is in melee videos and then pull frame by frame data, regardless of the use of third party overlays"));
-                                    })))(function () {
-                                        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("https://github.com/mitchdzugan/dolphin"))(Impulse_DOM_API.text("https://github.com/mitchdzugan/dolphin"))))(function () {
-                                            return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Fork of the dolphin gamecube emulator that I injected a server into so I can programmatically control it while it is running. Allows one to find specific frame/input sequences that most had assumed were within too large of a search space to find"))))(function () {
-                                                return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("https://github.com/mitchdzugan/MeleeSSToModel"))(Impulse_DOM_API.text("https://github.com/mitchdzugan/MeleeSSToModel"))))(function () {
-                                                    return Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(vidIndicator([ {
-                                                        vod: "/falco_model.mp4",
-                                                        desc: "This video demonstrates the algorithm used to create the model. Screenshots were generated using my dolphin fork that allows you to send controller inputs over TCP connection by pausing on the desired frame on a hacked version of the game where all background textures are green, rotating the camera to various angles via scripted inputs, and inspecting the emulator process RAM to determine exact camera position."
-                                                    }, {
-                                                        vod: "/falco_printed.mp4",
-                                                        desc: "This is the printed version of the model (coloring done by hand)"
-                                                    } ]))(function () {
-                                                        return Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("python script that converts screenshots from a bunch of an animation frame from a bunch of different angles into a printable 3d model"));
-                                                    }));
+                    return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.section_(Control_Apply.applySecond(Control_Monad_State_Trans.applyStateT(Data_Identity.monadIdentity))(Impulse_DOM_Attrs.className("section"))(Impulse_DOM_Attrs.id("liverpool")))(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.p_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.className("is-size-5 has-text-weight-bold"))(Impulse_DOM_API.text("Quarantine Liverpool")))(function () {
+                        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.className("has-text-weight-bold is-italic"))(Impulse_DOM_API.text(" (javascript) ")))(function () {
+                            return Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("https://github.com/mitchdzugan/liverpool"))(Impulse_DOM_API.text("https://github.com/mitchdzugan/liverpool"));
+                        });
+                    })))(function () {
+                        return Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(vidIndicator([ {
+                            vod: "/liverpool.mp4",
+                            desc: "This video shows a typical hand being played."
+                        } ]))(function () {
+                            return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_API.text("Online version of Liverpool card game made so family can continue playing weekly games during COVID-19 crisis. Playable "))(function () {
+                                return Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("http://quarantine-liverpool.herokuapp.com"))(Impulse_DOM_API.text("here"));
+                            })))(function () {
+                                return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Implemented using React and Socket.IO")))(function () {
+                                    return Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Responsive design supports being played on mobile or desktop"));
+                                });
+                            });
+                        }));
+                    })))(function () {
+                        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.section_(Control_Apply.applySecond(Control_Monad_State_Trans.applyStateT(Data_Identity.monadIdentity))(Impulse_DOM_Attrs.className("section"))(Impulse_DOM_Attrs.id("ssbm")))(Impulse_DOM_Tags.p_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.className("is-size-5 has-text-weight-bold"))(Impulse_DOM_API.text("Super Smash Bros. Melee Projects")))(function () {
+                            return Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("https://github.com/mitchdzugan/osx-wiiu-gcc-adapter"))(Impulse_DOM_API.text("https://github.com/mitchdzugan/osx-wiiu-gcc-adapter"))))(function () {
+                                return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("First OSX driver written for the official Nintendo GameCube usb adapter, on which all modern community accepted drivers are built from"))))(function () {
+                                    return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("https://github.com/mitchdzugan/cvmelee"))(Impulse_DOM_API.text("https://github.com/mitchdzugan/cvmelee"))))(function () {
+                                        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Uses openCV to pull statistics from videos of gameplay")))(function () {
+                                            return Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("This program is able to locate where the gameplay is in melee videos and then pull frame by frame data, regardless of the use of third party overlays"));
+                                        })))(function () {
+                                            return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("https://github.com/mitchdzugan/dolphin"))(Impulse_DOM_API.text("https://github.com/mitchdzugan/dolphin"))))(function () {
+                                                return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Fork of the dolphin gamecube emulator that I injected a server into so I can programmatically control it while it is running. Allows one to find specific frame/input sequences that most had assumed were within too large of a search space to find"))))(function () {
+                                                    return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("https://github.com/mitchdzugan/MeleeSSToModel"))(Impulse_DOM_API.text("https://github.com/mitchdzugan/MeleeSSToModel"))))(function () {
+                                                        return Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(vidIndicator([ {
+                                                            vod: "/falco_model.mp4",
+                                                            desc: "This video demonstrates the algorithm used to create the model. Screenshots were generated using my dolphin fork that allows you to send controller inputs over TCP connection by pausing on the desired frame on a hacked version of the game where all background textures are green, rotating the camera to various angles via scripted inputs, and inspecting the emulator process RAM to determine exact camera position."
+                                                        }, {
+                                                            vod: "/falco_printed.mp4",
+                                                            desc: "This is the printed version of the model (coloring done by hand)"
+                                                        } ]))(function () {
+                                                            return Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("python script that converts screenshots from a bunch of an animation frame from a bunch of different angles into a printable 3d model"));
+                                                        }));
+                                                    });
                                                 });
                                             });
                                         });
                                     });
                                 });
-                            });
-                        }));
-                    }))))(function () {
-                        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.section_(Control_Apply.applySecond(Control_Monad_State_Trans.applyStateT(Data_Identity.monadIdentity))(Impulse_DOM_Attrs.className("section"))(Impulse_DOM_Attrs.id("santa")))(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.p_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.className("is-size-5 has-text-weight-bold"))(Impulse_DOM_API.text("Secret Santa")))(function () {
-                            return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.className("has-text-weight-bold is-italic"))(Impulse_DOM_API.text(" (javascript) ")))(function () {
-                                return Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("https://github.com/mitchdzugan/secret-santa"))(Impulse_DOM_API.text("https://github.com/mitchdzugan/secret-santa"));
-                            });
-                        })))(function () {
-                            return Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Randomly assigns people to be another\u2019s Santa with customizable constraints like avoiding roommates")))(function () {
-                                return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Ability to upload and edit wish list which is made only visible to your randomly assigned santa")))(function () {
-                                    return Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Ability to anonymously chat with your Santa/person you are shopping to clarify confusion in wish list"));
-                                });
                             }));
-                        })))(function () {
-                            return Impulse_DOM_Tags.section_(Control_Apply.applySecond(Control_Monad_State_Trans.applyStateT(Data_Identity.monadIdentity))(Impulse_DOM_Attrs.className("section"))(Impulse_DOM_Attrs.id("mpp")))(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.p_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.className("is-size-5 has-text-weight-bold"))(Impulse_DOM_API.text("Messenger++")))(function () {
-                                return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.className("has-text-weight-bold is-italic"))(Impulse_DOM_API.text(" (clojurescript) ")))(function () {
-                                    return Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("https://github.com/mitchdzugan/secret-santa"))(Impulse_DOM_API.text("https://github.com/mitchdzugan/messenger_plus_plus"));
+                        }))))(function () {
+                            return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.section_(Control_Apply.applySecond(Control_Monad_State_Trans.applyStateT(Data_Identity.monadIdentity))(Impulse_DOM_Attrs.className("section"))(Impulse_DOM_Attrs.id("santa")))(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.p_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.className("is-size-5 has-text-weight-bold"))(Impulse_DOM_API.text("Secret Santa")))(function () {
+                                return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.className("has-text-weight-bold is-italic"))(Impulse_DOM_API.text(" (javascript) ")))(function () {
+                                    return Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("https://github.com/mitchdzugan/secret-santa"))(Impulse_DOM_API.text("https://github.com/mitchdzugan/secret-santa"));
                                 });
                             })))(function () {
-                                return Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("smashgg originally used Facebook Messenger to manage inbound support. I created this Chrome extension to improve the quality of life of the support team, which included the following features:")))(function () {
-                                    return Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(vidIndicator([ {
-                                        vod: "/mpp_1.mp4",
-                                        desc: "These videos were taken on the day we finally transitioned from facebook support chats to Intercom. On this day the whole support team joined a call and used my extension to leave all of the support chats and return their facebooks to a usable state. Their excitement and gratitude easily made this was one of my favorite day's ever as an engineer."
-                                    }, {
-                                        vod: "/mpp_2.mp4",
-                                        desc: "These videos were taken on the day we finally transitioned from facebook support chats to Intercom. On this day the whole support team joined a call and used my extension to leave all of the support chats and return their facebooks to a usable state. Their excitement and gratitude easily made this was one of my favorite day's ever as an engineer."
-                                    } ]))(function () {
-                                        return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Bulk adding to/removing from multiple people from multiple chats")))(function () {
-                                            return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Bulk messaging chats")))(function () {
-                                                return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Viewing unread chats based on certain filters")))(function () {
-                                                    return Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Automatically removed users from all 7000+ chats once the company moved to Intercom"));
+                                return Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Randomly assigns people to be another\u2019s Santa with customizable constraints like avoiding roommates")))(function () {
+                                    return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Ability to upload and edit wish list which is made only visible to your randomly assigned santa")))(function () {
+                                        return Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Ability to anonymously chat with your Santa/person you are shopping to clarify confusion in wish list"));
+                                    });
+                                }));
+                            })))(function () {
+                                return Impulse_DOM_Tags.section_(Control_Apply.applySecond(Control_Monad_State_Trans.applyStateT(Data_Identity.monadIdentity))(Impulse_DOM_Attrs.className("section"))(Impulse_DOM_Attrs.id("mpp")))(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.p_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.className("is-size-5 has-text-weight-bold"))(Impulse_DOM_API.text("Messenger++")))(function () {
+                                    return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.span_(Impulse_DOM_Attrs.className("has-text-weight-bold is-italic"))(Impulse_DOM_API.text(" (clojurescript) ")))(function () {
+                                        return Impulse_DOM_Tags.a_(Impulse_DOM_Attrs.href("https://github.com/mitchdzugan/secret-santa"))(Impulse_DOM_API.text("https://github.com/mitchdzugan/messenger_plus_plus"));
+                                    });
+                                })))(function () {
+                                    return Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("smashgg originally used Facebook Messenger to manage inbound support. I created this Chrome extension to improve the quality of life of the support team, which included the following features:")))(function () {
+                                        return Impulse_DOM_Tags.ul_(Impulse_DOM_Attrs.anil)(Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(vidIndicator([ {
+                                            vod: "/mpp_1.mp4",
+                                            desc: "These videos were taken on the day we finally transitioned from facebook support chats to Intercom. On this day the whole support team joined a call and used my extension to leave all of the support chats and return their facebooks to a usable state. Their excitement and gratitude easily made this was one of my favorite day's ever as an engineer."
+                                        }, {
+                                            vod: "/mpp_2.mp4",
+                                            desc: "These videos were taken on the day we finally transitioned from facebook support chats to Intercom. On this day the whole support team joined a call and used my extension to leave all of the support chats and return their facebooks to a usable state. Their excitement and gratitude easily made this was one of my favorite day's ever as an engineer."
+                                        } ]))(function () {
+                                            return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Bulk adding to/removing from multiple people from multiple chats")))(function () {
+                                                return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Bulk messaging chats")))(function () {
+                                                    return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_Reader_Trans.bindReaderT(Data_Identity.bindIdentity))(Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Viewing unread chats based on certain filters")))(function () {
+                                                        return Impulse_DOM_Tags.li_(Impulse_DOM_Attrs.anil)(Impulse_DOM_API.text("Automatically removed users from all 7000+ chats once the company moved to Intercom"));
+                                                    });
                                                 });
                                             });
-                                        });
+                                        }));
                                     }));
                                 }));
-                            }));
+                            });
                         });
                     });
                 });
@@ -416,6 +435,10 @@ var resumeNav = Impulse_DOM_Tags.div_(Impulse_DOM_Attrs.className("content nav-c
                             children: [ {
                                 title: "Impulse",
                                 id: "impulse",
+                                children: [  ]
+                            }, {
+                                title: "Quarantine Liverpool",
+                                id: "liverpool",
                                 children: [  ]
                             }, {
                                 title: "Super Smash Bros. Melee Projects",

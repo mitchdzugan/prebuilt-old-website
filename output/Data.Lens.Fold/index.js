@@ -3,6 +3,7 @@
 var Control_Applicative = require("../Control.Applicative/index.js");
 var Control_Apply = require("../Control.Apply/index.js");
 var Control_Category = require("../Control.Category/index.js");
+var Data_Array = require("../Data.Array/index.js");
 var Data_Either = require("../Data.Either/index.js");
 var Data_Eq = require("../Data.Eq/index.js");
 var Data_Foldable = require("../Data.Foldable/index.js");
@@ -254,6 +255,18 @@ var minimumOf = function (dictOrd) {
 var toListOf = function (p) {
     return foldrOf(p)(Data_List_Types.Cons.create)(Data_List_Types.Nil.value);
 };
+var toArrayOf = function (p) {
+    var $82 = Data_Array.fromFoldable(Data_List_Types.foldableList);
+    var $83 = toListOf(p);
+    return function ($84) {
+        return $82($83($84));
+    };
+};
+var toArrayOfOn = function (s) {
+    return function (p) {
+        return toArrayOf(p)(s);
+    };
+};
 var toListOfOn = function (s) {
     return function (p) {
         return toListOf(p)(s);
@@ -272,45 +285,45 @@ var traverseOf_ = function (dictApplicative) {
 };
 var has = function (dictHeytingAlgebra) {
     return function (p) {
-        var $82 = Data_Newtype.unwrap(Data_Newtype.newtypeDisj);
-        var $83 = foldMapOf(p)(Data_Function["const"](Data_HeytingAlgebra.tt(dictHeytingAlgebra)));
-        return function ($84) {
-            return $82($83($84));
-        };
-    };
-};
-var hasn$primet = function (dictHeytingAlgebra) {
-    return function (p) {
-        var $85 = Data_Newtype.unwrap(Data_Newtype.newtypeConj);
-        var $86 = foldMapOf(p)(Data_Function["const"](Data_HeytingAlgebra.ff(dictHeytingAlgebra)));
+        var $85 = Data_Newtype.unwrap(Data_Newtype.newtypeDisj);
+        var $86 = foldMapOf(p)(Data_Function["const"](Data_HeytingAlgebra.tt(dictHeytingAlgebra)));
         return function ($87) {
             return $85($86($87));
         };
     };
 };
+var hasn$primet = function (dictHeytingAlgebra) {
+    return function (p) {
+        var $88 = Data_Newtype.unwrap(Data_Newtype.newtypeConj);
+        var $89 = foldMapOf(p)(Data_Function["const"](Data_HeytingAlgebra.ff(dictHeytingAlgebra)));
+        return function ($90) {
+            return $88($89($90));
+        };
+    };
+};
 var lastOf = function (p) {
-    var $88 = Data_Newtype.unwrap(Data_Maybe_Last.newtypeLast);
-    var $89 = foldMapOf(p)(function ($91) {
-        return Data_Maybe_Last.Last(Data_Maybe.Just.create($91));
+    var $91 = Data_Newtype.unwrap(Data_Maybe_Last.newtypeLast);
+    var $92 = foldMapOf(p)(function ($94) {
+        return Data_Maybe_Last.Last(Data_Maybe.Just.create($94));
     });
-    return function ($90) {
-        return $88($89($90));
+    return function ($93) {
+        return $91($92($93));
     };
 };
 var lengthOf = function (p) {
-    var $92 = Data_Newtype.unwrap(Data_Newtype.newtypeAdditive);
-    var $93 = foldMapOf(p)(Data_Function["const"](1));
-    return function ($94) {
-        return $92($93($94));
+    var $95 = Data_Newtype.unwrap(Data_Newtype.newtypeAdditive);
+    var $96 = foldMapOf(p)(Data_Function["const"](1));
+    return function ($97) {
+        return $95($96($97));
     };
 };
 var preview = function (p) {
-    var $95 = Data_Newtype.unwrap(Data_Maybe_First.newtypeFirst);
-    var $96 = foldMapOf(p)(function ($98) {
-        return Data_Maybe_First.First(Data_Maybe.Just.create($98));
+    var $98 = Data_Newtype.unwrap(Data_Maybe_First.newtypeFirst);
+    var $99 = foldMapOf(p)(function ($101) {
+        return Data_Maybe_First.First(Data_Maybe.Just.create($101));
     });
-    return function ($97) {
-        return $95($96($97));
+    return function ($100) {
+        return $98($99($100));
     };
 };
 var previewOn = function (s) {
@@ -320,42 +333,42 @@ var previewOn = function (s) {
 };
 var productOf = function (dictSemiring) {
     return function (p) {
-        var $99 = Data_Newtype.unwrap(Data_Newtype.newtypeMultiplicative);
-        var $100 = foldMapOf(p)(Data_Monoid_Multiplicative.Multiplicative);
-        return function ($101) {
-            return $99($100($101));
-        };
-    };
-};
-var sequenceOf_ = function (dictApplicative) {
-    return function (p) {
-        var $102 = Data_Function.flip(Data_Newtype.unwrap(Data_Newtype.newtypeEndo))(Control_Applicative.pure(dictApplicative)(Data_Unit.unit));
-        var $103 = foldMapOf(p)(function (f) {
-            return function (v) {
-                return Control_Apply.applySecond(dictApplicative.Apply0())(f)(v);
-            };
-        });
+        var $102 = Data_Newtype.unwrap(Data_Newtype.newtypeMultiplicative);
+        var $103 = foldMapOf(p)(Data_Monoid_Multiplicative.Multiplicative);
         return function ($104) {
             return $102($103($104));
         };
     };
 };
-var sumOf = function (dictSemiring) {
+var sequenceOf_ = function (dictApplicative) {
     return function (p) {
-        var $105 = Data_Newtype.unwrap(Data_Newtype.newtypeAdditive);
-        var $106 = foldMapOf(p)(Data_Monoid_Additive.Additive);
+        var $105 = Data_Function.flip(Data_Newtype.unwrap(Data_Newtype.newtypeEndo))(Control_Applicative.pure(dictApplicative)(Data_Unit.unit));
+        var $106 = foldMapOf(p)(function (f) {
+            return function (v) {
+                return Control_Apply.applySecond(dictApplicative.Apply0())(f)(v);
+            };
+        });
         return function ($107) {
             return $105($106($107));
         };
     };
 };
+var sumOf = function (dictSemiring) {
+    return function (p) {
+        var $108 = Data_Newtype.unwrap(Data_Newtype.newtypeAdditive);
+        var $109 = foldMapOf(p)(Data_Monoid_Additive.Additive);
+        return function ($110) {
+            return $108($109($110));
+        };
+    };
+};
 var firstOf = function (p) {
-    var $108 = Data_Newtype.unwrap(Data_Maybe_First.newtypeFirst);
-    var $109 = foldMapOf(p)(function ($111) {
-        return Data_Maybe_First.First(Data_Maybe.Just.create($111));
+    var $111 = Data_Newtype.unwrap(Data_Maybe_First.newtypeFirst);
+    var $112 = foldMapOf(p)(function ($114) {
+        return Data_Maybe_First.First(Data_Maybe.Just.create($114));
     });
-    return function ($110) {
-        return $108($109($110));
+    return function ($113) {
+        return $111($112($113));
     };
 };
 var findOf = function (p) {
@@ -373,28 +386,28 @@ var findOf = function (p) {
 };
 var filtered = function (dictChoice) {
     return function (f) {
-        var $112 = Data_Profunctor.dimap(dictChoice.Profunctor0())(function (x) {
+        var $115 = Data_Profunctor.dimap(dictChoice.Profunctor0())(function (x) {
             var $42 = f(x);
             if ($42) {
                 return new Data_Either.Right(x);
             };
             return new Data_Either.Left(x);
         })(Data_Either.either(Control_Category.identity(Control_Category.categoryFn))(Control_Category.identity(Control_Category.categoryFn)));
-        var $113 = Data_Profunctor_Choice.right(dictChoice);
-        return function ($114) {
-            return $112($113($114));
+        var $116 = Data_Profunctor_Choice.right(dictChoice);
+        return function ($117) {
+            return $115($116($117));
         };
     };
 };
 var anyOf = function (dictHeytingAlgebra) {
     return function (p) {
         return function (f) {
-            var $115 = Data_Newtype.unwrap(Data_Newtype.newtypeDisj);
-            var $116 = foldMapOf(p)(function ($118) {
-                return Data_Monoid_Disj.Disj(f($118));
+            var $118 = Data_Newtype.unwrap(Data_Newtype.newtypeDisj);
+            var $119 = foldMapOf(p)(function ($121) {
+                return Data_Monoid_Disj.Disj(f($121));
             });
-            return function ($117) {
-                return $115($116($117));
+            return function ($120) {
+                return $118($119($120));
             };
         };
     };
@@ -416,12 +429,12 @@ var orOf = function (dictHeytingAlgebra) {
 var allOf = function (dictHeytingAlgebra) {
     return function (p) {
         return function (f) {
-            var $119 = Data_Newtype.unwrap(Data_Newtype.newtypeConj);
-            var $120 = foldMapOf(p)(function ($122) {
-                return Data_Monoid_Conj.Conj(f($122));
+            var $122 = Data_Newtype.unwrap(Data_Newtype.newtypeConj);
+            var $123 = foldMapOf(p)(function ($125) {
+                return Data_Monoid_Conj.Conj(f($125));
             });
-            return function ($121) {
-                return $119($120($121));
+            return function ($124) {
+                return $122($123($124));
             };
         };
     };
@@ -471,6 +484,8 @@ module.exports = {
     filtered: filtered,
     folded: folded,
     unfolded: unfolded,
+    toArrayOf: toArrayOf,
+    toArrayOfOn: toArrayOfOn,
     ifoldMapOf: ifoldMapOf,
     ifoldrOf: ifoldrOf,
     ifoldlOf: ifoldlOf,
